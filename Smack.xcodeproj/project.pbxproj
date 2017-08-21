@@ -12,6 +12,7 @@
 		3C2A07381F49B700009A7B63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A07361F49B700009A7B63 /* Main.storyboard */; };
 		3C2A073A1F49B700009A7B63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A07391F49B700009A7B63 /* Assets.xcassets */; };
 		3C2A073D1F49B700009A7B63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A073B1F49B700009A7B63 /* LaunchScreen.storyboard */; };
+		BF5EB41632384070A5B098CA /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686A3F207CB1B029978D43F5 /* Pods_Smack.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		3C2A07391F49B700009A7B63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C2A073C1F49B700009A7B63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C2A073E1F49B700009A7B63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42EA38CE6E3845F88EC7719F /* Pods-Smack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.debug.xcconfig"; sourceTree = "<group>"; };
+		686A3F207CB1B029978D43F5 /* Pods_Smack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1EE509554556941B3EB8CAA /* Pods-Smack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF5EB41632384070A5B098CA /* Pods_Smack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				3C2A07311F49B700009A7B63 /* Smack */,
 				3C2A07301F49B700009A7B63 /* Products */,
+				9EC1A963957169D00413D3E4 /* Pods */,
+				F6ABA2DD73C43C9CF06CFA15 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = Smack;
 			sourceTree = "<group>";
 		};
+		9EC1A963957169D00413D3E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				42EA38CE6E3845F88EC7719F /* Pods-Smack.debug.xcconfig */,
+				E1EE509554556941B3EB8CAA /* Pods-Smack.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F6ABA2DD73C43C9CF06CFA15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				686A3F207CB1B029978D43F5 /* Pods_Smack.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C2A07411F49B700009A7B63 /* Build configuration list for PBXNativeTarget "Smack" */;
 			buildPhases = (
+				6B2582FACDE421F0EB237044 /* [CP] Check Pods Manifest.lock */,
 				3C2A072B1F49B700009A7B63 /* Sources */,
 				3C2A072C1F49B700009A7B63 /* Frameworks */,
 				3C2A072D1F49B700009A7B63 /* Resources */,
+				ECCC5EFB8F72781D633EF3D3 /* [CP] Embed Pods Frameworks */,
+				E0A35E9F324E7BBCD6E5CFDF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6B2582FACDE421F0EB237044 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E0A35E9F324E7BBCD6E5CFDF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Smack/Pods-Smack-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECCC5EFB8F72781D633EF3D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Smack/Pods-Smack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3C2A072B1F49B700009A7B63 /* Sources */ = {
@@ -271,6 +346,7 @@
 		};
 		3C2A07421F49B700009A7B63 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42EA38CE6E3845F88EC7719F /* Pods-Smack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5EMC6RK8V9;
@@ -285,6 +361,7 @@
 		};
 		3C2A07431F49B700009A7B63 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1EE509554556941B3EB8CAA /* Pods-Smack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5EMC6RK8V9;
