@@ -42,10 +42,11 @@ class AuthService {
     }
     
     func registerUser(email: String, password: String, completion: @escaping CompletionHandler) {
+        
         let lowerCaseEmail = email.lowercased()
         
         let header = [
-            "Content-Type": "appication/json; charset=utf-8"
+            "Content-Type": "application/json; charset=utf-8"
         ]
         
         let body: [String: Any] = [
