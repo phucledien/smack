@@ -423,7 +423,7 @@
                                     <action selector="createAccntPressed:" destination="Xqq-mh-0qo" eventType="touchUpInside" id="2ic-Rf-BVe"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="tQm-vk-uxT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="tQm-vk-uxT" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="137.5" y="299" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Kj6-rS-0f2"/>
@@ -445,6 +445,10 @@
                                     <action selector="pickBGColorPressed:" destination="Xqq-mh-0qo" eventType="touchUpInside" id="zlE-NP-C5A"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YeF-fg-Ch7">
+                                <rect key="frame" x="169" y="215" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -454,6 +458,8 @@
                             <constraint firstItem="2kh-aw-bdU" firstAttribute="top" secondItem="JlC-wq-EM7" secondAttribute="bottom" constant="4" id="7eP-B0-MKi"/>
                             <constraint firstItem="y7q-Ip-QKs" firstAttribute="trailing" secondItem="epH-Sw-9hb" secondAttribute="trailing" constant="16" id="DZk-W3-4Kx"/>
                             <constraint firstItem="tQm-vk-uxT" firstAttribute="top" secondItem="tPO-ph-QPC" secondAttribute="bottom" constant="40" id="Hux-Qi-1mL"/>
+                            <constraint firstItem="YeF-fg-Ch7" firstAttribute="centerX" secondItem="vAd-ci-Hld" secondAttribute="centerX" id="HxJ-5L-SiC"/>
+                            <constraint firstItem="YeF-fg-Ch7" firstAttribute="centerY" secondItem="vAd-ci-Hld" secondAttribute="centerY" constant="-100" id="N0v-hF-TUY"/>
                             <constraint firstItem="2kh-aw-bdU" firstAttribute="centerX" secondItem="vAd-ci-Hld" secondAttribute="centerX" id="P1h-uj-bOR"/>
                             <constraint firstItem="ZB3-ks-0vT" firstAttribute="top" secondItem="y7q-Ip-QKs" secondAttribute="top" constant="40" id="am3-Gc-gM3"/>
                             <constraint firstItem="VUV-vp-4VF" firstAttribute="centerX" secondItem="vAd-ci-Hld" secondAttribute="centerX" id="bCe-Tj-Kaa"/>
@@ -469,6 +475,7 @@
                     <connections>
                         <outlet property="emailTxt" destination="6z9-G0-Do2" id="akH-A6-NxF"/>
                         <outlet property="passTxt" destination="L80-xn-S39" id="8Fo-sA-eat"/>
+                        <outlet property="spinner" destination="YeF-fg-Ch7" id="Bwr-rE-P3J"/>
                         <outlet property="userImg" destination="tQm-vk-uxT" id="Wzk-w0-Twd"/>
                         <outlet property="usernameTxt" destination="rg8-iY-U0g" id="Guj-pi-msc"/>
                         <segue destination="Hup-3A-9OI" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="8iI-Fo-ZR1"/>
